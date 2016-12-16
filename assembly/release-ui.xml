@@ -8,14 +8,14 @@
     <moduleSets>
         <moduleSet>
             <includes>
-                <include>com.dubboclub.dk:dubbokeeper-ui</include>
+                <include>com.dubboclub.dk:dk-ui</include>
             </includes>
             <binaries>
                 <unpack>false</unpack>
                 <dependencySets>
                     <dependencySet>
                         <includes>
-                            <include>com.dubboclub.dk:dubbokeeper-ui</include>
+                            <include>com.dubboclub.dk:dk-ui</include>
                         </includes>
                     </dependencySet>
                 </dependencySets>

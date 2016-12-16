@@ -34,8 +34,8 @@
     </bean>
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="basicDataSource"/>
-        <property name="configLocation" value="META-INF/mybatis/config.xml"/>
-        <property name="mapperLocations" value="classpath*:mapper/*Mapper.xml"/>
+        <property name="configLocation" value="mybatis/mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath*:mapper/StatisticsMapper.xml"/>
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.dubboclub.dk.storage.mysql.mapper"/>

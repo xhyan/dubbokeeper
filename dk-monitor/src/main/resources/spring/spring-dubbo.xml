@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
@@ -5,14 +6,10 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <dubbo:application name="${dubbo.application.name}" owner="${dubbo.application.owner}"/>
 
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations">
-            <value>
-                classpath*:/*.properties
-            </value>
-        </property>
-    </bean>
+    <bean class="com.dubboclub.dk.monitor.DubboKeeperMonitorService" autowire="byType" id="dubboKeeperMonitorService" />
 
+    <dubbo:service interface="com.alibaba.dubbo.monitor.MonitorService" ref="dubboKeeperMonitorService" id="exportMonitorService">
+        <dubbo:parameter key="interval" value="${monitor.collect.interval}"/>
+    </dubbo:service>
 </beans>

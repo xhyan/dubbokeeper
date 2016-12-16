@@ -8,15 +8,6 @@
     
     <dubbo:application name="${dubbo.application.name}" owner="${dubbo.application.owner}"/>
 
-    <bean class="com.dubboclub.dk.web.utils.ContextHolder" />
-    <bean class="com.dubboclub.dk.web.properties.DubboKeeperConfigurer">
-        <property name="locations">
-            <value>
-                classpath*:/dubbo.properties
-            </value>
-        </property>
-    </bean>
-
     <dubbo:reference interface="com.dubboclub.dk.storage.StatisticsStorage" check="false"  id="statisticsStorage"/>
 
 </beans>

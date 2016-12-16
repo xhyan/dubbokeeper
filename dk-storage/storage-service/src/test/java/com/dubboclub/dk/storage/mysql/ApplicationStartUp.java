@@ -1,13 +1,8 @@
 package com.dubboclub.dk.storage.mysql;
 
 import com.alibaba.fastjson.JSON;
-import com.dubboclub.dk.storage.model.ApplicationInfo;
-import com.dubboclub.dk.storage.mysql.mapper.ApplicationMapper;
-import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -24,7 +19,7 @@ import org.springframework.transaction.support.TransactionTemplate;
  * @description: 描述功能
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath*:applicationContext.xml","classpath*:META-INF/spring/mysql.xml"})
+@ContextConfiguration(locations = {"classpath*:applicationContext.xml", "classpath*:spring/mysql.xml"})
 public abstract class ApplicationStartUp extends AbstractJUnit4SpringContextTests{
 
 
